@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding: 0;
+}
+header, section, footer, aside, nav, article, hgroup{
+    display: block;
+}
+
+h1{
+    text-decoration:underline; 
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+header > hgroup > h1{
+    text-decoration:none;
+    padding-bottom: 0px;
+    font-family: serif;
+    font-size: 40px;
+}
+
+#reddit{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid rgba(255,250,250,0.3);
+    background: rgba(0,0,0,0.4);
+    height: auto;
+    padding: 20px;
+    width: 620px;
+    border-radius: 15px;
+}
+
+#strava{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid rgba(255,250,250,0.3);
+    background: rgba(0,0,0,0.4);
+    height: auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+}
+#main_header{
+    background: none repeat scroll 0 0;
+    padding:10px;
+}
+
+hgroup{
+    display: inline-block;
+    margin: auto 10px;
+}
+
+#package{
+    margin: 20px auto;
+    text-align: left;
+    width: 1000px;
+}
+
+#galleria{ 
+
+    width: 655px; 
+    height: 700px; 
+    background: #000;
+}
+
+/*************MENY****************/
+
+#menu{
+    color: white;
+    padding-left: 30px;
+}
+#menu li{
+    z-index: 30;
+}
+#menu ul li{
+    width: 125px;
+    text-align: center;
+    position: relative;
+    float:left;
+    margin-right: 5px;
+    font-family: "Tahoma",serif;
+}
+
+#menu ul , ul.sub1 , ul.sub2 {
+    list-style-type: none; 
+}
+
+#menu ul a{
+    color:white;
+    text-decoration: none;
+    display:block;
+    width: 125px;
+    height: 25px;
+    line-height: 25px;border: 1px solid rgba(255,250,250,0.3);
+    background: rgb(0,0,0);
+    border-radius: 5px;
+}
+
+#menu ul .sub1 a{
+    margin-top: 3px;
+}
+
+#menu ul .sub2 a{
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+#menu ul li:hover > a{
+    background: rgb(85,85,85);  
+}
+
+#menu ul li:hover a:hover{
+    background: rgb(255,255,255);
+    color:black;
+}
+
+#menu ul li:hover .darrow{
+    color:black;
+}
+
+#menu ul ul:hover li:hover .rarrow{
+    color:black;
+}
+
+#menu ul ul.sub1{
+    display: none;
+    position: absolute;
+    top:26px;
+    left:0px;
+}
+
+#menu ul ul.sub2{
+    display: none;
+    position: absolute;
+    top:0px;
+    left:121px;
+}
+
+#menu ul li:hover .sub1{
+    display:block;
+}
+
+#menu ul .sub1 li:hover .sub2{
+    display:block;
+}
+
+.darrow{
+    font-size: 11pt;
+    position: absolute;
+    top: 5px;
+    right:4px;
+}
+
+.rarrow{
+    font-size: 10pt;
+    position: absolute;
+    top: 6px;
+    right:4px;
+}
+/****************SIDENYHETER*********************/
+aside{
+    border: 1px solid rgba(255,250,250,0.3);
+    background: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    float:left;
+    height:auto;
+    margin: 30px 0 0;
+    padding: 30px;
+    width: 200px;
+}
+/***************ARTIKLER***********************/
+article{
+    border: 1px solid rgba(255,250,250,0.3);
+    background: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding:20px 20px 25px;
+}
+
+article header{
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+article footer{
+    padding-top: 3px;
+    padding-bottom: 10px;
+    float:right;
+}
+/***************************************/
+#main{
+    float:left;
+    margin: 30px;
+    width: 660px;
+    padding-bottom: 20px;
+}
+
+/***************Footer***********************/
+#main_footer{
+    position: fixed;
+    bottom: 0px;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    font-family: Arial;
+    text-shadow: 1px 1px 1px black;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.25);
+    box-shadow: inset 0 1px rgba(255,255,255,0.3),
+        inset 0 10px rgba(255,255,255,0.2), 
+        inset 0 10px 20px rgba(255,255,255, 0.35),
+        inset 0 -15px 30px rgba(0,0,0, 0.3); 
+}
+
+#main_footer h2{
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration:underline;
+    color:#CC0000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+#main_footer p{
+    color:white;
+    font-size: 12px;
+    float:left;
+    padding:0px 10px;
+    margin: 10px 0px;
+}
+
+#main_footer img{
+    border:none;
+}
+
+#main_footer li ul{
+    list-style:none;
+    padding:0px;
+    margin-bottom: 12px;
+}
+
+/***************************************/
+.clear{
+    clear:both;
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+    width:0px;
+    height:0px;
+}
