@@ -5,6 +5,34 @@
 header, section, footer, aside, nav, article, hgroup{
     display: block;
 }
+#aero{
+    background:url("../img/bg/bg_aero.jpg")no-repeat center center fixed;
+    -moz-background-size: cover;
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
+#cartoons{
+    background:url("../img/bg/bg_cartoon.jpg")no-repeat center center fixed;
+    -moz-background-size: cover;
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
+#games{
+    background:url("../img/bg/bg_games.jpg")no-repeat center center fixed;
+    -moz-background-size: cover;
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
+#index{
+    background:url("../img/bg/bg.jpg")no-repeat center center fixed;
+    -moz-background-size: cover;
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
 
 h1{
     text-decoration:underline; 

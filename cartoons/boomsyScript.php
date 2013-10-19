@@ -1,13 +1,12 @@
-<?php @include '../include/header.php'; ?>
-<style>
-    body{
-        background:url("../res/img/bg/bg_cartoon.jpg")no-repeat center center fixed;
-        -moz-background-size: cover;
-        background-size: cover;
-        color:white;
-        text-align: center;
-    }
-</style>
+<?php
+
+@include '../include/header.php';
+
+function name() {
+    $folderName = dirname(preg_replace('/\.php$/', '', __FILE__));
+    return basename($folderName);
+}
+?>
 <section id="main">
     <h1>Boomsy skript</h1>
     <object style="padding-bottom: 10px;" data="../res/skript/boomsyblad1.pdf" type="application/pdf" width="100%" height="800">

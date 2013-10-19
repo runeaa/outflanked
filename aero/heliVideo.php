@@ -1,13 +1,12 @@
-<?php @include '../include/header.php'; ?>
-<style>
-    body{
-        background:url("../res/img/bg/bg_aero.jpg")no-repeat center center fixed;
-        -moz-background-size: cover;
-        background-size: cover;
-        color:white;
-        text-align: center;
-    }
-</style>
+<?php
+
+@include '../include/header.php';
+
+function name() {
+    $folderName = dirname(preg_replace('/\.php$/', '', __FILE__));
+    return basename($folderName);
+}
+?>
 <script type="text/javascript" src="../res/scripts/jwplayer.js"></script>
 <section id="main">
     <h1 >Da awesome quad</h1>

@@ -1,14 +1,12 @@
-<?php @include '../include/header.php'; ?>
-<style>
-    body{
-        background:url("../res/img/bg/bg_cartoon.jpg")no-repeat center center fixed;
-        -moz-background-size: cover;
-        background-size: cover;
-        color:white;
-        text-align: center;
-    }
+<?php
 
-</style>
+@include '../include/header.php';
+
+function name() {
+    $folderName = dirname(preg_replace('/\.php$/', '', __FILE__));
+    return basename($folderName);
+}
+?>
 <section id="main">
     <article><header>Jasså..</header>
         <p>..du sitt og glor.

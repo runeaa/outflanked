@@ -10,16 +10,16 @@
         <script type='text/javascript' src="../res/JQuery/camera.min.js"></script>
         <title>Outflanked</title>
     </head>
-    <body>
+    <body id="<?php echo name() ?>">
         <div id="package">
             <header id="main_header">
                 <a href="../index/index.php"><img src="../res/img/logo/logoweb.png"></a>
                 <hgroup>
                     <h1>Outflanked</h1>
                 </hgroup>
-                <a href="login.php">
-                    <img style="float:right"src="../res/img/logo/bman.png">
-                </a>               
+                <a href="../batcave/batcave.php">
+                    <img style="float:right" src="../res/img/logo/bman.png">
+                </a>
                 
             </header>
             <nav id="menu">
@@ -90,6 +90,25 @@
                                 </ul>
                             </li>
                             <li><a href="../cartoons/dawn.php">Dawn</a>
+                                <span class="rarrow">&#9654;</span>
+                                <ul class="sub2">
+                                    <li><a href="../cartoons/dawnSketches.php"> Skisser</a></li>
+                                    <li><a href="../cartoons/dawnScript.php"> Manus</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a title="timelapse" href="../cartoons/cartoons.php">Timelapse</a>
+                        <span class="darrow">&#9660;</span>
+                        <ul class="sub1">
+                            <li><a href="../cartoons/boomsy.php">Moving</a>
+                                <span class="rarrow">&#9654;</span>
+                                <ul class="sub2">
+                                    <li><a href="../cartoons/boomsySketches.php"> Skisser</a></li>
+                                    <li><a href="../cartoons/boomsyScript.php"> Manus</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../cartoons/dawn.php">Stationary</a>
                                 <span class="rarrow">&#9654;</span>
                                 <ul class="sub2">
                                     <li><a href="../cartoons/dawnSketches.php"> Skisser</a></li>

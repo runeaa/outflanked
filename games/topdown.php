@@ -1,13 +1,12 @@
-<?php @include '../include/header.php'; ?>
-<style>
-    body{
-        background:url("../res/img/bg/bg_games.jpg")no-repeat center center fixed;
-        -moz-background-size: cover;
-        background-size: cover;
-        color:white;
-        text-align: center;
-    }
-</style>
+<?php
+
+@include '../include/header.php';
+
+function name() {
+    $folderName = dirname(preg_replace('/\.php$/', '', __FILE__));
+    return basename($folderName);
+}
+?>
 <section id="main">
     <article><header>Top-down perspektiv</header>
         <p>Perspektivet som brukes i "The Walker" er det samme perspektivet

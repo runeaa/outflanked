@@ -1,13 +1,13 @@
-<?php @include '../include/header.php'; ?>
-<style>
-    body{
-        background:url("../res/img/bg/bg_aero.jpg")no-repeat center center fixed;
-        -moz-background-size: cover;
-        background-size: cover;
-        color:white;
-        text-align: center;
-    }
+<?php
 
+@include '../include/header.php';
+
+function name() {
+    $folderName = dirname(preg_replace('/\.php$/', '', __FILE__));
+    return basename($folderName);
+}
+?>
+<style>
     #galleria2{ 
         width: 655px; 
         height: 700px; 
@@ -55,14 +55,12 @@
     <h1>Micro Twister</h1>
     <div style="align:center;">
         <div id="galleria3">
-            <img src="../res/img/plane/photo1.jpg">
-            <img src="../res/img/plane/photo2.jpg">
-            <img src="../res/img/plane/photo3.jpg">
-            <img src="../res/img/plane/photo4.jpg">
-            <img src="../res/img/plane/photo5.jpg">
-            <img src="../res/img/plane/photo6.jpg">
-            <img src="../res/img/plane/photo7.jpg">
-            <img src="../res/img/plane/photo8.jpg">
+            <?php
+            for ($i = 1; $i < 9; $i++) {
+            echo '<a href="../res/img/plane/display/photo' . $i . '.jpg"><img src="../res/img/plane/thumb/photo' . $i . '.jpg" 
+           data-big="../res/img/plane/original/photo' . $i . '.jpg"></a>';
+        }
+        ?>
         </div>
     </div>
     <br>
@@ -76,6 +74,7 @@
         Galleria.run('#galleria');
         Galleria.run('#galleria2');
         Galleria.run('#galleria3');
+       
     </script>
 </section>
 <?php @include '../include/aside.php'; ?>

@@ -1,13 +1,12 @@
-<?php @include '../include/header.php'; ?>
-<style>
-    body{
-        background:url("../res/img/bg/bg_cartoon.jpg")no-repeat center center fixed;
-        -moz-background-size: cover;
-        background-size: cover;
-        color:white;
-        text-align: center;
-    }
-</style>
+<?php
+
+@include '../include/header.php';
+
+function name() {
+    $folderName = dirname(preg_replace('/\.php$/', '', __FILE__));
+    return basename($folderName);
+}
+?>
 <section id="main">
     <article><header>Arbeidstittel "Dawn"</header>
         <p>Dawn er den første nye ip på over ti år, den forrige var faktisk Boomsy. 

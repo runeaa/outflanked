@@ -1,35 +1,24 @@
-<?php @include '../include/header.php'; ?>
-<style>
-    body{
-        background:url("../res/img/bg/bg_aero.jpg")no-repeat center center fixed;
-        -moz-background-size: cover;
-        background-size: cover;
-        color:white;
-        text-align: center;
-    }
-</style>
+<?php
+
+@include '../include/header.php';
+
+function name() {
+    $folderName = dirname(preg_replace('/\.php$/', '', __FILE__));
+    return basename($folderName);
+}
+?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <script src="../res/galleria/galleria-1.2.9.min.js"></script>
 <section id="main">
     <h1>En ny quad blir født</h1>
     <div style="align:center;">
         <div id="galleria">
-            <img src="../res/img/quad/photo1.jpg">
-            <img src="../res/img/quad/photo2.jpg">
-            <img src="../res/img/quad/photo3.jpg">
-            <img src="../res/img/quad/photo4.jpg">
-            <img src="../res/img/quad/photo5.jpg">
-            <img src="../res/img/quad/photo6.jpg">
-            <img src="../res/img/quad/photo7.jpg">
-            <img src="../res/img/quad/photo8.jpg">
-            <img src="../res/img/quad/photo9.jpg">
-            <img src="../res/img/quad/photo10.jpg">
-            <img src="../res/img/quad/photo11.jpg">
-            <img src="../res/img/quad/photo12.jpg">
-            <img src="../res/img/quad/photo13.jpg">
-            <img src="../res/img/quad/photo14.jpg">
-            <img src="../res/img/quad/photo15.jpg">
-            <img src="../res/img/quad/photo16.jpg">
+            <?php
+            for ($i = 1; $i < 17; $i++) {
+            echo '<a href="../res/img/quad/display/photo' . $i . '.jpg"><img src="../res/img/quad/thumb/photo' . $i . '.jpg" 
+           data-big="../res/img/quad/original/photo' . $i . '.jpg"></a>';
+        }
+        ?>
         </div>
     </div>
     <br>
@@ -43,6 +32,16 @@
     <script>
         Galleria.loadTheme('../res/galleria/themes/classic/galleria.classic.min.js');
         Galleria.run('#galleria');
+        Galleria.ready(function() {
+            this.bind('image', function(e) {
+                $(e.imageTarget).unbind('click').click(function() {
+                    path = e.imageTarget.src;
+                    var name = path.match(/([^\/]*)\/*$/)[1];
+                    Galleria.log('Now viewing ' + name);
+                    window.open("../res/img/quad/original/" + name, true);
+                });
+            });
+        });
     </script>
 </section>
 <?php @include '../include/aside.php'; ?>
